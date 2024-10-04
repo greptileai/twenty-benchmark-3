@@ -38,7 +38,13 @@ spec:
         - name: STORAGE_TYPE
           value: "local"
         - name: "MESSAGE_QUEUE_TYPE"
-          value: "pg-boss"
+          value: "bull-mq"
+        - name: "CACHE_STORAGE_TYPE"
+          value: "redis"
+        - name : "REDIS_HOST"
+          value: "twentycrm-redis.twentycrm.svc.cluster.local"
+        - name: "REDIS_PORT"
+          value: 6379
         - name: ACCESS_TOKEN_SECRET
           valueFrom:
             secretKeyRef:
